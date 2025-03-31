@@ -12,3 +12,15 @@ model Number {
   id        String   @id @default(uuid())
   value    Int
 }
+
+enum Class {
+  Math
+  Science
+  History
+}
+
+model Grade {
+  id     String   @id @default(uuid())
+  class  Class
+  grade  Int
+}
